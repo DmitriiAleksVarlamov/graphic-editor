@@ -3,4 +3,4 @@
 ## Start project
 
 ### DEV
-- pnpn run start
+- pnpn run dev

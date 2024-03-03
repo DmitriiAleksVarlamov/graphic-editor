@@ -1,9 +1,7 @@
 FROM node
 
 # Install graphics magick
-RUN apt-get update
-RUN apt-get install -y graphicsmagick
-RUN apt-get install -y imagemagick
+RUN apt-get update && apt-get install -y graphicsmagick && apt-get install -y imagemagick
 RUN npm install -g pnpm
 
 # Create app directory
