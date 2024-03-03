@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import gm from 'gm';
 import path from 'node:path';
 import express from 'express';
-const PORT = 6000;
+const PORT = 8000;
 const app = express();
 
 app.get('/', (req, res) => {
