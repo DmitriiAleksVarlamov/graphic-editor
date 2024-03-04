@@ -8,6 +8,6 @@
     "outDir": "dist",
     "removeComments": true,
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/constants.ts"],
   "lib": ["es2015"]
 }
