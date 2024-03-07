@@ -1,0 +1,12 @@
+services:
+  server:
+    build:
+      context: .
+      # target: dev
+    ports:
+      - 8000:8000
+      - 9229:9229
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ./src:/app/src

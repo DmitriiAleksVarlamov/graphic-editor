@@ -14,3 +14,6 @@
     ]
 - Start container:
     * docker run -i -t -p 8000:8000 --name grapp gr
+
+### Stop application
+ - docker stop grapp && docker rm grapp && docker rmi gr
