@@ -14,8 +14,9 @@ app.get('/', (req, res) => {
 	);
 
 	gm(readStream, 'img.jpg')
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 		.identify(function (error, data) {
-			console.log({ error, data });
+			console.log('{ error, data }');
 		})
 		.stream(function (error, stdout) {
 			if (error) {
