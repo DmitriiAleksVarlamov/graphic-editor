@@ -1,8 +1,21 @@
 services:
-  server:
+
+  server-dev:
     build:
       context: .
-      # target: dev
+      target: dev
+    ports:
+      - 8000:8000
+      - 9229:9229
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ./src:/app/src
+
+  server-prod:
+    build:
+      context: .
+      target: prod
     ports:
       - 8000:8000
       - 9229:9229
