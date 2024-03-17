@@ -1,4 +1,4 @@
-FROM node
+FROM node AS base
 
 # Install graphics magick
 RUN apt-get update && apt-get install -y graphicsmagick && apt-get install -y imagemagick
@@ -11,8 +11,13 @@ WORKDIR /app
 RUN pnpm install > /dev/null
 
 EXPOSE 8000
+
+FROM base AS dev
 CMD [ "pnpm", "dev" ]
 
+
+FROM base AS prod
+CMD [ "pnpm", "start" ]
 # syntax=docker/dockerfile:1
 
 # ARG NODE_VERSION=20.0.0
